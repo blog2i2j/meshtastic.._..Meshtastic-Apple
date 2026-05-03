@@ -1,20 +1,15 @@
 <!--
 Sync Impact Report
-  Version change: 1.0.0 → 1.2.0
-  Modified principles: II (Core Data Persistence → SwiftData Persistence)
-  Updated sections:
-    - Technology Stack & Constraints (added snapshot testing details)
-    - Development Workflow (expanded testing guidance)
+  Version change: 1.2.0 → 1.3.0
+  Modified principles: none
+  Updated sections: none
   Added sections:
-    - Core Principles (7 principles)
-    - Technology Stack & Constraints
-    - Development Workflow
-    - Governance
+    - Principle VIII (Meshtastic Design Standards Compliance)
   Removed sections: N/A
   Templates requiring updates:
-    - .specify/templates/plan-template.md ✅ no changes needed (uses dynamic constitution check)
-    - .specify/templates/spec-template.md ✅ no changes needed (project-agnostic)
-    - .specify/templates/tasks-template.md ✅ no changes needed (project-agnostic)
+    - .specify/templates/plan-template.md ✅ no changes needed
+    - .specify/templates/spec-template.md ✅ no changes needed
+    - .specify/templates/tasks-template.md ✅ no changes needed
   Follow-up TODOs: None
 -->
 
@@ -127,6 +122,19 @@ cross-platform rendering consistency.
 compilation keeps a single codebase while respecting platform
 capabilities.
 
+### VIII. Meshtastic Design Standards Compliance
+
+All UI work MUST comply with the
+[Meshtastic Client Design Standards](https://raw.githubusercontent.com/meshtastic/design/refs/heads/master/standards/meshtastic_design_standards_latest.md).
+This is the canonical, authoritative source for all visual and
+interaction design requirements. Agents and contributors MUST fetch
+and review this document before making UI changes. Do not rely on
+summaries — always consult the latest version at the URL above.
+
+**Rationale**: A single canonical design standards document prevents
+drift between inline summaries and the authoritative source, ensuring
+cross-platform consistency as standards evolve.
+
 ## Technology Stack & Constraints
 
 - **Language**: Swift (latest stable), using Swift Concurrency
@@ -152,6 +160,7 @@ capabilities.
 - **CI/CD**: Xcode Cloud with pre-build secrets injection
 - **IDE**: Latest release version of Xcode
 - **License**: GPL v3
+- **Design Standards**: [Meshtastic Client Design Standards](https://raw.githubusercontent.com/meshtastic/design/refs/heads/master/standards/meshtastic_design_standards_latest.md)
 - **Deep Links**: `meshtastic:///` URL scheme for navigation,
   shortcuts, and widget integration
 
@@ -210,4 +219,4 @@ with these principles.
   MUST be justified in the PR description and approved by a
   maintainer.
 
-**Version**: 1.2.0 | **Ratified**: 2026-04-15 | **Last Amended**: 2026-04-26
+**Version**: 1.3.0 | **Ratified**: 2026-04-15 | **Last Amended**: 2026-05-03
