@@ -56867,6 +56867,9 @@
         }
       }
     },
+    "TLS is required for the public Meshtastic MQTT server." : {
+
+    },
     "To comply with privacy laws like CCPA and GDPR, we avoid sharing exact location data. Instead, we use anonymized or approximate (imprecise) location information to protect your privacy." : {
       "localizations" : {
         "da" : {
