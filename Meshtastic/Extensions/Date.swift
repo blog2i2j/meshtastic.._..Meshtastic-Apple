@@ -37,4 +37,12 @@ extension Date {
 		default: return "Nighttime".localized
 		}
 	}
+
+	/// Filename-safe timestamp: `2026-05-04_101521`
+	var exportTimestamp: String {
+		let formatter = DateFormatter()
+		formatter.dateFormat = "yyyy-MM-dd_HHmmss"
+		formatter.locale = Locale(identifier: "en_US_POSIX")
+		return formatter.string(from: self)
+	}
 }

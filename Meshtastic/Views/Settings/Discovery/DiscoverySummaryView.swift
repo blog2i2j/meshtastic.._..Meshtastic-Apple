@@ -56,7 +56,7 @@ struct DiscoverySummaryView: View {
 			isPresented: $isExportingPDF,
 			document: pdfDocument,
 			contentType: .pdf,
-			defaultFilename: "Meshtastic Scan \(session.timestamp.formatted(.iso8601.year().month().day().dateSeparator(.dash)))_\(session.timestamp.formatted(.dateTime.hour(.twoDigits(amPM: .omitted)).minute(.twoDigits).second(.twoDigits)))"
+			defaultFilename: "Meshtastic Scan \(session.timestamp.exportTimestamp)"
 		) { result in
 			switch result {
 			case .success:
